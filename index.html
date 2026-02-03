@@ -12,20 +12,24 @@
   --text:#111827;
   --muted:#6b7280;
   --border:#e5e7eb;
-  --accent:#2563eb;
+
+  /* Amazon-inspired colors */
+  --primary:#ff9900;
+  --primary-dark:#e68a00;
+  --header:#232f3e;
+
   --radius:14px;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 html,body{margin:0;background:var(--bg);color:var(--text);}
 
-/* ===== Sticky Call Bar ===== */
+/* ===== Sticky Top Call Bar ===== */
 .callbar{
   position:sticky;
   top:0;
   z-index:999;
-  background:#fff;
-  border-bottom:1px solid var(--border);
+  background:var(--header);
   padding:10px 14px;
   display:flex;
   align-items:center;
@@ -33,14 +37,20 @@ html,body{margin:0;background:var(--bg);color:var(--text);}
   gap:10px;
 }
 
+.callbar .label{
+  font-size:11px;
+  color:#cbd5e1;
+}
+
 .callbar .number{
   font-weight:800;
   font-size:16px;
+  color:#fff;
 }
 
 .callbar a{
-  background:var(--accent);
-  color:#fff;
+  background:var(--primary);
+  color:#111;
   text-decoration:none;
   padding:12px 16px;
   border-radius:10px;
@@ -65,6 +75,7 @@ html,body{margin:0;background:var(--bg);color:var(--text);}
 h1{
   font-size:22px;
   margin:0 0 8px;
+  color:var(--header);
 }
 
 .lead{
@@ -89,12 +100,12 @@ h1{
   margin-top:14px;
 }
 .badge{
-  background:#eef2ff;
-  color:#1e40af;
+  background:#fff7ed;
+  color:#92400e;
   padding:7px 12px;
   border-radius:999px;
   font-size:13px;
-  font-weight:600;
+  font-weight:700;
 }
 
 .callbox{
@@ -107,25 +118,31 @@ h1{
 
 .callbox strong{
   font-size:17px;
+  color:var(--header);
 }
 
 .phone{
   font-size:22px;
   font-weight:800;
   margin:6px 0;
+  color:#111;
 }
 
 .cta{
   display:block;
   margin-top:12px;
-  background:var(--accent);
-  color:#fff;
+  background:var(--primary);
+  color:#111;
   text-decoration:none;
   text-align:center;
   padding:16px;
   border-radius:12px;
   font-size:16px;
   font-weight:800;
+}
+
+.cta:active{
+  background:var(--primary-dark);
 }
 
 .note{
@@ -135,24 +152,20 @@ h1{
   line-height:1.4;
 }
 
-/* Desktop tweaks */
+/* Desktop polish */
 @media(min-width:900px){
-  .callbar{
-    padding:14px 24px;
-  }
-  .wrap{
-    padding-top:40px;
-  }
+  .callbar{padding:14px 24px;}
+  .wrap{padding-top:36px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Sticky top call bar -->
+<!-- Sticky Top Call Bar -->
 <div class="callbar">
   <div>
-    <div style="font-size:12px;color:#6b7280;">Live Support</div>
+    <div class="label">Live Customer Support</div>
     <div class="number">+1 (833) 332-2991</div>
   </div>
   <a href="tel:+18333322991">📞 Call Now</a>
@@ -161,10 +174,10 @@ h1{
 <div class="wrap">
   <main class="card">
 
-    <h1>Speak to a Live Support Agent</h1>
+    <h1>Get Help With Orders & Accounts</h1>
     <p class="lead">
-      Get immediate help with online orders, delivery issues, refunds,
-      account access, and billing questions.
+      Speak with a live support agent for assistance with online orders,
+      delivery issues, refunds, account access, and billing questions.
     </p>
 
     <ul class="list">
@@ -176,7 +189,7 @@ h1{
 
     <div class="badges">
       <div class="badge">Live agents</div>
-      <div class="badge">Fast resolution</div>
+      <div class="badge">Fast help</div>
       <div class="badge">Secure & confidential</div>
     </div>
 
@@ -186,8 +199,8 @@ h1{
       <a href="tel:+18333322991" class="cta">📞 Speak to a Live Agent</a>
 
       <p class="note">
-        Independent third-party support service. Not affiliated with Amazon or
-        any specific retailer. Support provided for general order and account issues.
+        Independent third-party customer support service.
+        Not affiliated with Amazon or any retailer.
       </p>
     </div>
 
